@@ -5,9 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink ="/home" >Home</a>
+      <a mat-list-item href="#">Search</a>
+      <a mat-list-item href="#">comments</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -18,10 +18,16 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
       </button>
-      <span>marketDemo</span>
+      <span>ABC Supper Market</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+
+    <router-outlet>
+
+    </router-outlet>
+
+
   </mat-sidenav-content>
 </mat-sidenav-container>
